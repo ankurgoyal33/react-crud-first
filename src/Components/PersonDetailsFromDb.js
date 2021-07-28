@@ -9,34 +9,48 @@ class PersonDetailsFromDb extends React.Component {
     columns = [
         {
             key: 'column1',
+            name: 'Profile Pic',
+            fieldName: 'ProfilePic',
+            minWidth: 70,
+            maxWidth: 90,
+        },
+        {
+            key: 'column2',
             name: 'First Name',
             fieldName: 'FirstName',
             minWidth: 70,
             maxWidth: 90,
         },
         {
-            key: 'column2',
+            key: 'column3',
             name: 'Last Name',
             fieldName: 'LastName',
             minWidth: 70,
             maxWidth: 90,
         },
         {
-            key: 'column3',
+            key: 'column4',
             name: 'Address',
             fieldName: 'Address',
-            minWidth: 170,
-            maxWidth: 190,
+            minWidth: 100,
+            maxWidth: 120,
         },
         {
-            key: 'column4',
+            key: 'column5',
             name: 'Phone',
             fieldName: 'Phone',
             minWidth: 70,
             maxWidth: 90,
         },
         {
-            key: 'column5',
+            key: 'column6',
+            name: 'Email',
+            fieldName: 'Email',
+            minWidth: 120,
+            maxWidth: 200,
+        },
+        {
+            key: 'column7',
             name: 'Edit & Delete',
             fieldName: 'EditDelete',
             minWidth: 70,
@@ -55,7 +69,7 @@ class PersonDetailsFromDb extends React.Component {
                             onClick={() => {
                                 // this.props.deleteData(item._id)
                                 if (window.confirm("Are you sure?")) {
-                                    this.props.deleteData(item.FirstName)
+                                    this.props.deleteData(item.Email)
                                 }
                                 // <Modal
                                 //     isOpen={isModalOpen}
